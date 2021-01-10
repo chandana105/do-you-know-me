@@ -1,3 +1,20 @@
+const chalk = require('chalk')
+const boxen = require('boxen')
+
+let greeting = chalk.black.bgAnsi256(194).bold(`DO YOU KNOW ME?`)
+
+const boxenOptions = {
+  padding: 1,
+  margin: 1,
+  borderStyle: 'classic',
+  borderColor: 'green',
+  backgroundColor: '#fff',
+}
+
+const msgBox = boxen(greeting, boxenOptions)
+
+console.log(msgBox)
+
 var readlineSync = require('readline-sync')
 var score = 0
 var userName = readlineSync.question('May I know your name please ?')
